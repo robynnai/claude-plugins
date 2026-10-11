@@ -1,0 +1,57 @@
+{
+  "description": "Memory Vault: save each prompt and Claude's final reply to your vault.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/first-run.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:memory-vault:session-sync",
+            "tool": "gc_session_save",
+            "input": {
+              "agent": "claude-code",
+              "event": "prompt",
+              "session_id": "${session_id}",
+              "turn_id": "${prompt_id}",
+              "text": "${prompt}",
+              "cwd": "${cwd}"
+            },
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "mcp_tool",
+            "server": "plugin:memory-vault:session-sync",
+            "tool": "gc_session_save",
+            "input": {
+              "agent": "claude-code",
+              "event": "reply",
+              "session_id": "${session_id}",
+              "turn_id": "${prompt_id}",
+              "text": "${last_assistant_message}",
+              "cwd": "${cwd}"
+            },
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "session-sync": {
+      "type": "http",
+      "url": "https://mcp.memory.robynn.ai/mcp",
+      "oauth": {
+        "clientId": "https://mcp.memory.robynn.ai/cli/client.json"
+      }
+    }
+  }
+}

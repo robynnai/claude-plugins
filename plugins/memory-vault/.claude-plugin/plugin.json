@@ -1,0 +1,17 @@
+{
+  "name": "memory-vault",
+  "displayName": "Robynn Memory Vault",
+  "version": "0.1.0",
+  "description": "Saves your Claude Code sessions to Memory Vault as you work: each prompt and Claude's final reply, so your other AI apps can pick up where you left off.",
+  "author": {
+    "name": "Robynn AI",
+    "url": "https://memory.robynn.ai"
+  },
+  "homepage": "https://memory.robynn.ai/desktop-help#claude-code",
+  "keywords": [
+    "memory",
+    "handoff",
+    "sessions",
+    "robynn"
+  ]
+}

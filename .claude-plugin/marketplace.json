@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "robynn",
+  "description": "Robynn's plugins for Claude Code.",
+  "owner": {
+    "name": "Robynn AI",
+    "url": "https://memory.robynn.ai"
+  },
+  "plugins": [
+    {
+      "name": "memory-vault",
+      "source": "./plugins/memory-vault",
+      "description": "Saves your Claude Code sessions to Memory Vault as you work: each prompt and Claude's final reply, so your other AI apps can pick up where you left off.",
+      "category": "productivity"
+    }
+  ]
+}
