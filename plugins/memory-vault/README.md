@@ -5,8 +5,8 @@ Saves your Claude Code sessions to [Memory Vault](https://memory.robynn.ai) as y
 ## Set up
 
 1. **Add the plugin.**
-   - In Claude (claude.ai or the Claude app): open **Customize**, then **Plugins**, choose **Add marketplace**, enter `ROBYNN_MARKETPLACE_REPO`, and turn on **Robynn Memory Vault**. It reaches Claude Code on every computer where you sign in with the same Claude account (Claude Code 2.1.273 or later).
-   - Or, in Claude Code: `/plugin marketplace add ROBYNN_MARKETPLACE_REPO`, then `/plugin install memory-vault@robynn`.
+   - In Claude (claude.ai or the Claude app): open **Customize**, then **Plugins**, choose **Add marketplace**, enter `robynnai/claude-plugins`, and turn on **Robynn Memory Vault**. It reaches Claude Code on every computer where you sign in with the same Claude account (Claude Code 2.1.273 or later).
+   - Or, in Claude Code: `/plugin marketplace add robynnai/claude-plugins`, then `/plugin install memory-vault@robynn`.
 2. **Sign in once on each computer.** In Claude Code, run `/mcp`, choose `plugin:memory-vault:session-sync`, and sign in with your Memory Vault account. The sign-in page asks you to allow **Memory Vault importer**.
 
 Until you sign in, Claude Code shows that a server needs sign-in, notes a hook error after each prompt and reply, and saves nothing.

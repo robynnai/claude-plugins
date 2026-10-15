@@ -9,7 +9,7 @@ Nothing here is public yet. Publishing needs the owner's approval for each step 
    - It must be **public**. claude.ai's Add marketplace documents github.com repositories, and public GitLab and Bitbucket ones. Private repositories aren't documented for personal accounts. Organization sync needs a private or internal repo.
    - Suggested name: `robynnai/claude-plugins`. Any name works; the marketplace is called `robynn` either way.
 3. **Fill in the address.** Replace `ROBYNN_MARKETPLACE_REPO` in `README.md` and `plugins/memory-vault/README.md` with the repository (`owner/repo`).
-4. **Turn on the web offer.** Set `GC_CLAUDE_CODE_PLUGIN_MARKETPLACE=<owner/repo>` in Doppler for both `prd_gc_web` and `prd_gc_api`, apply it with `scripts/gc_fly_secrets.sh prd web|api`, then `fly secrets deploy`. The web app's Claude Code card and `/desktop-help#claude-code` then show the plugin.
+4. **Turn on the web offer.** Set `GC_CLAUDE_CODE_PLUGIN_MARKETPLACE=<owner/repo>` in Doppler `prd_gc_web`, apply it with `scripts/gc_fly_secrets.sh prd web`, then `fly secrets deploy -a growth-cortex-web`. The web app's Claude Code card and `/desktop-help#claude-code` then show the plugin.
 5. **Try it from a clean account** (docs/TEST_PLAN.md, the "Synced" cases).
 
 ## Versions

@@ -6,10 +6,10 @@ This repository is a Claude Code plugin marketplace named `robynn`.
 |---|---|
 | [`memory-vault`](plugins/memory-vault) | Saves your Claude Code sessions to [Memory Vault](https://memory.robynn.ai) as you work: each prompt and Claude's final reply, never files or tool output. |
 
-Add it in Claude (claude.ai or the Claude app): open **Customize**, then **Plugins**, choose **Add marketplace**, and enter `ROBYNN_MARKETPLACE_REPO`. Or, in Claude Code:
+Add it in Claude (claude.ai or the Claude app): open **Customize**, then **Plugins**, choose **Add marketplace**, and enter `robynnai/claude-plugins`. Or, in Claude Code:
 
 ```
-/plugin marketplace add ROBYNN_MARKETPLACE_REPO
+/plugin marketplace add robynnai/claude-plugins
 /plugin install memory-vault@robynn
 ```
 
